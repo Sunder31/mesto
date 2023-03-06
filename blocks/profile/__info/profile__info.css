@@ -1,0 +1,25 @@
+.profile__info{
+    max-width: 336px;
+    height: fit-content;
+    margin: 0 auto 0 0;
+    padding: 22px 0 25px 0;
+    display: grid;
+    gap: 18px 16px;
+    grid-template-areas:
+    "name button"
+    "about about" ;
+}
+@media (max-width: 897px) {
+    .profile__info{
+            margin: 35px 0 30px 0;
+            padding: 0;
+            text-align: center;
+        }
+}
+@media (max-width: 420px) {
+    .profile__info{
+            margin-left: 19px;
+            margin-right: 19px;
+            gap: 14px 10px;
+        }
+}

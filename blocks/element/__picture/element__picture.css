@@ -1,0 +1,11 @@
+.element__picture{
+    width: 282px;
+    height: 282px;
+    display: block;
+}
+@media (max-width: 320px) {
+    .element__picture{
+            width: 100%;
+            object-fit: fill;
+        }
+}

@@ -1,0 +1,37 @@
+.button__close{
+    background: url(../../../images/close_button.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 155px;
+    right: 30%;
+}
+.button__close:hover{
+    opacity: 0.6;
+}
+@media (max-width: 897px) {
+    .button__close{
+            right: 21%;
+        }
+}
+@media (max-width: 598px) {
+    .button__close{
+            width: 20px;
+            height: 20px;
+            top: 87px;
+        }
+}
+@media (max-width: 420px) {
+    .button__close{
+            right: 15%;
+        }
+}
+@media (max-width: 320px) {
+    .button__close{
+            right: 19px;
+        }
+}

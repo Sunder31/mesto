@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./pages/index.css" />
+        <title>Mesto</title>
+    </head>
+    <body>
+        <div class="page">
+            <div class="header">
+                <div class="logo"></div>
+            </div>
+            <main>
+                <section class="profile">
+                    <img src="./images/avatar.svg" alt="фото профиля" class="avatar">
+                    <div class="profile__info">
+                        <h1 class="profile__name">Жак-Ив Кусто</h1>
+                        <p class="profile__about">Исследователь океана</p>
+                        <button class="button__edit-profile"></button>
+                    </div>
+                    <button class="button__add"></button>
+                </section>
+                <!-- Картинки заменю по завершении проекта, если вы не против-->
+                <section class="elements">
+                    <div class="element">
+                        <img src="./images/ponasenkov.jpg" alt="евгений понасенков" class="element__picture">
+                        <div class="element__info">
+                            <h2 class="element__name">Переиграл и уничтожил</h2>
+                            <button class="button__like"></button>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <img src="./images/goblin-kapec.jpg" alt="мем с гоблином" class="element__picture">
+                        <div class="element__info">
+                            <h2 class="element__name">Дмитрий Пучков</h2>
+                            <button class="button__like"></button>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <img src="./images/shaggy_wtf.jpg" alt="Шегги напуган" class="element__picture">
+                        <div class="element__info">
+                            <h2 class="element__name">Шегги</h2>
+                            <button class="button__like"></button>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <img src="./images/wasp_bzzz.jpg" alt="пчела жужжит" class="element__picture">
+                        <div class="element__info">
+                            <h2 class="element__name">Пчёлка</h2>
+                            <button class="button__like"></button>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <img src="./images/think_about_it.png" alt="Думать о проекте" class="element__picture">
+                        <div class="element__info">
+                            <h2 class="element__name">Думать о проекте</h2>
+                            <button class="button__like"></button>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <img src="./images/work_on_it.png" alt="Делать проект" class="element__picture">
+                        <div class="element__info">
+                            <h2 class="element__name">Делать проект</h2>
+                            <button class="button__like"></button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <p class="footer__copyright">© 2020 Mesto Russia</p>
+            </footer>
+            <!----- Попап ----->
+            <section class="popup">
+                <button class="button__close"></button>
+                <form class="popup__container">
+                    <h2 class="edit__profile">Редактировать профиль</h2>
+                    <input type="text" class="input__name">
+                    <input type="text" class="input__about">
+                    <button type="submit" class="button__confirm">Сохранить</button>
+                </form>
+            </section>
+        </div>
+        <script src="./scripts/index.js"></script>
+    </body>
+</html>
