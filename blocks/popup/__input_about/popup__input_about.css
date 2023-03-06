@@ -1,6 +1,5 @@
-.input__name{
+.popup__input_about{
     width: 358px;
-    margin: 0 auto 43px;
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -13,7 +12,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 598px) {
-    .input__name{
-            width: 239px;
-        }
+    .popup__input_about {
+            width: 238px;
+            }
 }

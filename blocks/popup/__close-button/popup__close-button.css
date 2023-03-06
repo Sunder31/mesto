@@ -1,4 +1,4 @@
-.button__close{
+.popup__close-button{
     background: url(../../../images/close_button.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,28 +10,28 @@
     top: 155px;
     right: 30%;
 }
-.button__close:hover{
+.popup__close-button:hover{
     opacity: 0.6;
 }
 @media (max-width: 897px) {
-    .button__close{
+    .popup__close-button{
             right: 21%;
         }
 }
 @media (max-width: 598px) {
-    .button__close{
+    .popup__close-button{
             width: 20px;
             height: 20px;
             top: 87px;
         }
 }
 @media (max-width: 420px) {
-    .button__close{
+    .popup__close-button{
             right: 15%;
         }
 }
 @media (max-width: 320px) {
-    .button__close{
+    .popup__close-button{
             right: 19px;
         }
 }

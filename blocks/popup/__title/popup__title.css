@@ -1,4 +1,4 @@
-.edit__profile{
+.popup__title{
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 900;
@@ -9,7 +9,7 @@
     margin: 34px 64px 54px 36px;
 }
 @media (max-width: 598px) {
-    .edit__profile{
+    .popup__title{
             font-size: 18px;
             line-height: 22px;
             width: 238px;
