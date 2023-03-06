@@ -7,7 +7,7 @@
     gap: 18px 16px;
     grid-template-areas:
     "name button"
-    "about about" ;
+    "about about";
 }
 @media (max-width: 897px) {
     .profile__info{

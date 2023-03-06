@@ -1,5 +1,5 @@
 .header{
-    margin: 45px auto 40px ;
+    margin: 45px auto 40px;
     max-width: 880px;
     height: 74px;
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
@@ -7,7 +7,7 @@
 }
 @media (max-width: 897px) {
     .header{
-            margin: 40px 15vw 35px 15vw ;
+            margin: 40px 15vw 35px 15vw;
         }
 }
 @media (max-width: 320px) {
