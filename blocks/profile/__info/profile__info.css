@@ -11,15 +11,13 @@
 }
 @media (max-width: 897px) {
     .profile__info{
-            margin: 35px 0 30px 0;
+            margin: 26px 0 36px 0;
             padding: 0;
             text-align: center;
         }
 }
 @media (max-width: 420px) {
     .profile__info{
-            margin-left: 19px;
-            margin-right: 19px;
             gap: 14px 10px;
         }
 }

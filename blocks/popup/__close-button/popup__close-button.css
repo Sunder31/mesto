@@ -7,31 +7,31 @@
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 155px;
-    right: 30%;
+    top: 260px;
+    margin: 0 385px 0 863px;
 }
 .popup__close-button:hover{
     opacity: 0.6;
 }
 @media (max-width: 897px) {
     .popup__close-button{
-            right: 21%;
+ 
         }
 }
 @media (max-width: 598px) {
     .popup__close-button{
             width: 20px;
             height: 20px;
-            top: 87px;
+            margin: 15px 0 0 265px;
         }
 }
 @media (max-width: 420px) {
     .popup__close-button{
-            right: 15%;
+         
         }
 }
 @media (max-width: 320px) {
     .popup__close-button{
-            right: 19px;
+
         }
 }

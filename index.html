@@ -7,18 +7,18 @@
         <link rel="stylesheet" href="./pages/index.css" />
         <title>Mesto</title>
     </head>
-    <body>
+    <body class="wrapper">
         <div class="page">
-            <div class="header">
+            <header class="header">
                 <div class="logo"></div>
-            </div>
+            </header>
             <main>
                 <section class="profile">
                     <img src="./images/avatar.svg" alt="фото профиля" class="avatar">
                     <div class="profile__info">
                         <h1 class="profile__name">Жак-Ив Кусто</h1>
                         <p class="profile__about">Исследователь океана</p>
-                        <button class="profile__edit-button"></button>
+                        <button type="button" class="profile__edit-button"></button>
                     </div>
                     <button class="profile__add-button"></button>
                 </section>
@@ -28,42 +28,42 @@
                         <img src="./images/ponasenkov.jpg" alt="евгений понасенков" class="element__picture">
                         <div class="element__info">
                             <h2 class="element__name">Переиграл и уничтожил</h2>
-                            <button class="element__like-button"></button>
+                            <button type="button" class="element__like-button"></button>
                         </div>
                     </div>
                     <div class="element">
                         <img src="./images/goblin-kapec.jpg" alt="мем с гоблином" class="element__picture">
                         <div class="element__info">
                             <h2 class="element__name">Дмитрий Пучков</h2>
-                            <button class="element__like-button"></button>
+                            <button type="button" class="element__like-button"></button>
                         </div>
                     </div>
                     <div class="element">
                         <img src="./images/shaggy_wtf.jpg" alt="Шегги напуган" class="element__picture">
                         <div class="element__info">
                             <h2 class="element__name">Шегги</h2>
-                            <button class="element__like-button"></button>
+                            <button type="button" class="element__like-button"></button>
                         </div>
                     </div>
                     <div class="element">
                         <img src="./images/wasp_bzzz.jpg" alt="пчела жужжит" class="element__picture">
                         <div class="element__info">
                             <h2 class="element__name">Пчёлка</h2>
-                            <button class="element__like-button"></button>
+                            <button type="button" class="element__like-button"></button>
                         </div>
                     </div>
                     <div class="element">
                         <img src="./images/think_about_it.png" alt="Думать о проекте" class="element__picture">
                         <div class="element__info">
                             <h2 class="element__name">Думать о проекте</h2>
-                            <button class="element__like-button"></button>
+                            <button type="button" class="element__like-button"></button>
                         </div>
                     </div>
                     <div class="element">
                         <img src="./images/work_on_it.png" alt="Делать проект" class="element__picture">
                         <div class="element__info">
                             <h2 class="element__name">Делать проект</h2>
-                            <button class="element__like-button"></button>
+                            <button type="button" class="element__like-button"></button>
                         </div>
                     </div>
                 </section>
@@ -74,12 +74,14 @@
             <!----- Попап ----->
             <section class="popup">
                 <button class="popup__close-button"></button>
-                <form class="popup__container">
-                    <h2 class="popup__title">Редактировать профиль</h2>
-                    <input type="text" class="popup__input-name">
-                    <input type="text" class="popup__input-about">
-                    <button type="submit" class="popup__conmfirm-button">Сохранить</button>
-                </form>
+                <div class="popup__container">
+                    <form class="form__edit-profile" name="editProfileForm">
+                        <h2 class="popup__title">Редактировать профиль</h2>
+                        <input type="text" class="form__item_el_name">
+                        <input type="text" class="form__item_el_about">
+                        <button type="submit" class="popup__conmfirm-button">Сохранить</button>
+                    </form>
+                </div>
             </section>
         </div>
         <script src="./scripts/index.js"></script>

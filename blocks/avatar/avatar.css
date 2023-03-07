@@ -4,3 +4,9 @@
     width: 120px;
     height: 120px;
 }
+
+@media (max-width: 897px){
+    .avatar{
+    margin: 0;
+    }
+}
