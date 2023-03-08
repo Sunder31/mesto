@@ -4,10 +4,10 @@
 @import url(../blocks/wrapper/wrapper.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
-@import url(../blocks/popup/__confirm-button/popup__conmfirm-button.css);
+@import url(../blocks/popup/__submit-button/popup__submit-button.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/element/__like-button/element__like-button.css);
-@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/form/__title/form__title.css);
 @import url(../blocks/form/form.css);
 @import url(../blocks/element/element.css);
 @import url(../blocks/element/__info/element__info.css);
