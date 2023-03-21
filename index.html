@@ -22,57 +22,14 @@
                     </div>
                     <button type="button" class="profile__add-button"></button>
                 </section>
-                <!-- Картинки заменю по завершении проекта, если вы не против-->
                 <section class="elements">
-                    <div class="element">
-                        <img src="./images/ponasenkov.jpg" alt="евгений понасенков" class="element__picture">
-                        <div class="element__info">
-                            <h2 class="element__name">Переиграл и уничтожил</h2>
-                            <button type="button" class="element__like-button"></button>
-                        </div>
-                    </div>
-                    <div class="element">
-                        <img src="./images/goblin-kapec.jpg" alt="мем с гоблином" class="element__picture">
-                        <div class="element__info">
-                            <h2 class="element__name">Дмитрий Пучков</h2>
-                            <button type="button" class="element__like-button"></button>
-                        </div>
-                    </div>
-                    <div class="element">
-                        <img src="./images/shaggy_wtf.jpg" alt="Шегги напуган" class="element__picture">
-                        <div class="element__info">
-                            <h2 class="element__name">Шегги</h2>
-                            <button type="button" class="element__like-button"></button>
-                        </div>
-                    </div>
-                    <div class="element">
-                        <img src="./images/wasp_bzzz.jpg" alt="пчела жужжит" class="element__picture">
-                        <div class="element__info">
-                            <h2 class="element__name">Пчёлка</h2>
-                            <button type="button" class="element__like-button"></button>
-                        </div>
-                    </div>
-                    <div class="element">
-                        <img src="./images/think_about_it.png" alt="Думать о проекте" class="element__picture">
-                        <div class="element__info">
-                            <h2 class="element__name">Думать о проекте</h2>
-                            <button type="button" class="element__like-button"></button>
-                        </div>
-                    </div>
-                    <div class="element">
-                        <img src="./images/work_on_it.png" alt="Делать проект" class="element__picture">
-                        <div class="element__info">
-                            <h2 class="element__name">Делать проект</h2>
-                            <button type="button" class="element__like-button"></button>
-                        </div>
-                    </div>
                 </section>
             </main>
             <footer class="footer">
                 <p class="footer__copyright">© 2020 Mesto Russia</p>
             </footer>
-            <!----- Попап ----->
-            <section class="popup">
+            <!----- Попап для редактирования профиля----->
+            <section class="popup popup_edit-profile">
                 <div class="popup__container">
                     <button type="button" class="popup__close-button"></button>
                     <form class="form" name="editProfileForm">
@@ -83,6 +40,36 @@
                     </form>
                 </div>
             </section>
+            <!----- Попап для для добавления карточек----->
+            <section class="popup popup_add-element">
+                <div class="popup__container">
+                    <button type="button" class="popup__close-button"></button>
+                    <form class="form" name="addElementForm">
+                        <h2 class="form__title">Новое место</h2>
+                        <input type="text" class="form__input form__input_place-name" placeholder="Название">
+                        <input type="text" class="form__input form__input_image-link" placeholder="Ссылка на картинку">
+                        <button type="submit" class="popup__submit-button">Создать</button>
+                    </form>
+                </div>
+            </section>
+            <!----- Попап просмотра картинки----->
+            <section class="popup popup_image-view">
+                <div class="popup__image-container">
+                    <button type="button" class="popup__close-button"></button>
+                    <img src="" alt="" class="popup__image">
+                    <p class="popup__image-subtitle"></p>
+                </div>
+            </section>
+            <template class="template-item">
+                <div class="element">
+                    <button type="button" class="element__delete-button"></button>
+                    <img src="" alt="" class="element__picture">
+                    <div class="element__info">
+                        <h2 class="element__name"></h2>
+                        <button type="button" class="element__like-button"></button>
+                    </div>
+                </div>
+            </template>
         </div>
         <script src="./scripts/index.js"></script>
     </body>

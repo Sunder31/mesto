@@ -3,5 +3,6 @@
     width: 100%;
     object-fit: fill;
     display: block;
-    
+    object-fit: cover;
+    cursor: pointer;
 }
