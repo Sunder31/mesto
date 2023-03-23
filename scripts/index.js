@@ -104,6 +104,13 @@ function handleEditProfileFormSubmit (evt) {
 
 function handleAddElementFormSubmit (evt) {
     evt.preventDefault();
+    const data = {
+        name: placeInput.value,
+        link: linkInput.value,
+        alt: placeInput.value,
+    };
+    
+    addCard(data, elements);
     closePopup(popupAddElement);
 }
 
@@ -111,16 +118,21 @@ formEditProfile.addEventListener('submit', handleEditProfileFormSubmit);
 formAddCard.addEventListener('submit', handleAddElementFormSubmit);
 
 // функция создания карточек
-function createCard(name, link){
+function createCard(data){
     const cardElement = templateCard.querySelector('.element').cloneNode(true);
     cardElement.querySelector('.element__delete-button').addEventListener('click', cardDeleteButton);
     const cardInfo = cardElement.querySelector('.element__picture');
-        cardInfo.src = link;
-        cardInfo.alt = name;
-    cardElement.querySelector('.element__name').textContent = name;
+        cardInfo.src = data.link;
+        cardInfo.alt = data.name;
+    cardInfo.addEventListener('click', openImagePopup);
+    cardElement.querySelector('.element__name').textContent = data.name;
     cardElement.querySelector('.element__like-button').addEventListener('click', likeCardToggle);
-    elements.prepend(cardElement);
     return cardElement;
+}
+// Функция добавления карточки
+const addCard = (data, elements) => {
+    const cardElement = createCard(data);
+    elements.prepend(cardElement);
 }
 
 // добавление карточки
@@ -129,7 +141,7 @@ formAddCard.addEventListener('submit', function(evt){
 });
 
 // Добавление карточек из массива
-initialCards.forEach(data => { createCard(data.name, data.link); });
+initialCards.forEach(cardElement => { addCard(cardElement, elements)});
 
 const popupImageViewOpen = document.querySelector('.element__picture');
 const popupImagePictureInfo = popupImageView.querySelector('.popup__image');
@@ -143,7 +155,6 @@ function openImagePopup(evt) {
     openPopup(popupImageView)
   }
 
-popupImageViewOpen.addEventListener('click', openImagePopup)
 
   // Удаление карточки
 function cardDeleteButton(evt){
