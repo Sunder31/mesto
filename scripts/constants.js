@@ -4,8 +4,8 @@ const initialCards = [
       link: 'https://media.tenor.com/CwzryBmEzW8AAAAC/you-got-it-chrissy-costanza.gif'
     },
     {
-      name: 'Билли Бутчер',
-      link: 'https://media.tenor.com/T3dxQvlBqwAAAAAC/taking-a-drink-billy-butcher.gif'
+      name: 'Патрик(я) и JS',
+      link: 'https://media.tenor.com/YnizaZv-1TMAAAAC/patrick-star-dumb.gif'
     },
     {
       name: 'Марти Макфлай',

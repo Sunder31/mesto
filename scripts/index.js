@@ -14,7 +14,8 @@ const popupAddElementOpen = document.querySelector('.profile__add-button');
 // Функция для открытия попапа
 const openPopup = function (popup){
     popup.classList.add('popup_opened');
-}
+    document.addEventListener('keydown', closePopupByPressingEscape);
+};
 
 // Открытие попапов
 popupEditProfileOpen.addEventListener('click', function() {
@@ -37,7 +38,8 @@ const popupImageViewClose = popupImageView.querySelector('.popup__close-button')
 // функция для закрытия попапов
 const closePopup = function(popup){
     popup.classList.remove('popup_opened');
-}
+    document.removeEventListener('keydown', closePopupByPressingEscape);
+};
 
 // Закрытие попапов при клике на кнопку
 popupEditProfileClose.addEventListener('click', function() {
@@ -51,6 +53,21 @@ popupAddElementClose.addEventListener('click', function() {
 popupImageViewClose.addEventListener('click', function() {
     closePopup(popupImageView)
 });
+
+// закрытие попапа при нажатии клавиши Escape
+const closePopupByPressingEscape = function(event){
+    if (event.key === 'Escape'){
+        closePopup(popupEditProfile);
+        closePopup(popupAddElement);
+        closePopup(popupImageView);
+    }
+};
+
+
+popupEditProfile.addEventListener('keydown', closePopupByPressingEscape);
+popupAddElement.addEventListener('keydown', closePopupByPressingEscape);
+popupImageView.addEventListener('keydown', closePopupByPressingEscape);
+
 
 // закрытие попапа при клике по оверлею
 const closeEditProfilePopupByClickOnOverlay = function(event){
