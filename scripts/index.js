@@ -57,43 +57,25 @@ popupImageViewClose.addEventListener('click', function() {
 // закрытие попапа при нажатии клавиши Escape
 const closePopupByPressingEscape = function(event){
     if (event.key === 'Escape'){
-        closePopup(popupEditProfile);
-        closePopup(popupAddElement);
-        closePopup(popupImageView);
+        const currentPopup = document.querySelector('.popup_opened');
+        closePopup(currentPopup);
     }
 };
 
 
-popupEditProfile.addEventListener('keydown', closePopupByPressingEscape);
-popupAddElement.addEventListener('keydown', closePopupByPressingEscape);
-popupImageView.addEventListener('keydown', closePopupByPressingEscape);
-
 
 // закрытие попапа при клике по оверлею
-const closeEditProfilePopupByClickOnOverlay = function(event){
+const closePopupByClickOnOverlay = function(event){
     if (event.target !== event.currentTarget) {
         return;
     }
-    closePopup(popupEditProfile);
+    closePopup(event.target);
 }
 
-const closeAddElementPopupByClickOnOverlay = function(event){
-    if (event.target !== event.currentTarget) {
-        return;
-    }
-    closePopup(popupAddElement);
-}
 
-const closeImageViewPopupByClickOnOverlay = function(event){
-    if (event.target !== event.currentTarget) {
-        return;
-    }
-    closePopup(popupImageView);
-}
-
-popupEditProfile.addEventListener('click', closeEditProfilePopupByClickOnOverlay)
-popupAddElement.addEventListener('click', closeAddElementPopupByClickOnOverlay)
-popupImageView.addEventListener('click', closeImageViewPopupByClickOnOverlay)
+popupEditProfile.addEventListener('click', closePopupByClickOnOverlay)
+popupAddElement.addEventListener('click', closePopupByClickOnOverlay)
+popupImageView.addEventListener('click', closePopupByClickOnOverlay)
 
 // Формы
 const formEditProfile = popupEditProfile.querySelector('.form');

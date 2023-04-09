@@ -10,9 +10,6 @@ const validationConfig = {
 const enableValidation = ({formSelector, ...rest}) => {
     const forms = Array.from(document.querySelectorAll(formSelector))
     forms.forEach((form) => {
-        form.addEventListener('submit', (evt) => {
-            evt.preventDefault();
-        });
         setEventListeners(form, rest);
     });
 };
@@ -21,6 +18,11 @@ const setEventListeners = (form, {inputSelector, submitButtonSelector, inactiveB
     const formInputs = Array.from(form.querySelectorAll(inputSelector))
     const formButton = form.querySelector(submitButtonSelector)
     disableButton(formButton, inactiveButtonClass);
+
+    form.addEventListener('reset', () => {
+        disableButton(formButton, inactiveButtonClass);
+      });    
+
     formInputs.forEach(input => {
         input.addEventListener('input', () => {
             checkInputValidity(input, rest)
@@ -33,22 +35,31 @@ const setEventListeners = (form, {inputSelector, submitButtonSelector, inactiveB
     });
 };
 
-const checkInputValidity = (input, {inputErrorClass, errorClass}) => {
-    const inputErrorContainer = document.querySelector(`.${input.id}-error`)
+const checkInputValidity = (input, {...rest}) => {
     if(input.checkValidity()) { 
-        inputErrorContainer.textContent = '';
-        inputErrorContainer.classList.remove(errorClass);
-        input.classList.remove(inputErrorClass);
+        hideInputError(input, rest);
     } else {
-        inputErrorContainer.textContent = input.validationMessage;
-        input.classList.add(inputErrorClass);
-        inputErrorContainer.classList.add(errorClass);
+        showInputError(input, rest);
     }
 }
 
 
 const hasInvalidInput = (formInputs) => {
     return formInputs.some(item => !item.validity.valid)
+}
+
+const showInputError = (input, {inputErrorClass, errorClass}) => {
+    const inputErrorContainer = document.querySelector(`.${input.id}-error`)
+    inputErrorContainer.textContent = input.validationMessage;
+    input.classList.add(inputErrorClass);
+    inputErrorContainer.classList.add(errorClass);
+}
+
+const hideInputError = (input, {inputErrorClass, errorClass}) => {
+    const inputErrorContainer = document.querySelector(`.${input.id}-error`)
+    inputErrorContainer.textContent = '';
+    inputErrorContainer.classList.remove(errorClass);
+    input.classList.remove(inputErrorClass);
 }
 
 const enableButton = (formButton, inactiveButtonClass) => {
