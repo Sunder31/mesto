@@ -4,8 +4,8 @@ const initialCards = [
       link: 'https://media.tenor.com/CwzryBmEzW8AAAAC/you-got-it-chrissy-costanza.gif'
     },
     {
-      name: 'Патрик(я) и JS',
-      link: 'https://media.tenor.com/YnizaZv-1TMAAAAC/patrick-star-dumb.gif'
+      name: 'Я и JS',
+      link: 'https://media.tenor.com/2BWxjkNu854AAAAC/pedro-pascal-mandalorian.gif'
     },
     {
       name: 'Марти Макфлай',
@@ -24,3 +24,5 @@ const initialCards = [
       link: 'https://media.tenor.com/wcTAJ_FqG0oAAAAC/папич.gif'
     }
   ];
+
+  export {initialCards};
