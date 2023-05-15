@@ -1,10 +1,10 @@
  class Card {
-    constructor(data, templateSelector, openImagePopup){
+    constructor({ data, handleCardClick }, templateSelector){
         this._data = data;
         this._name = data.name;
         this._link = data.link;
         this._templateSelector = templateSelector;
-        this._openImagePopup = openImagePopup;
+        this._handleCardClick = handleCardClick;
     }
     _getTemplate() {
         const card = document.querySelector(this._templateSelector).content.querySelector('.element').cloneNode(true);
@@ -19,10 +19,6 @@
         this._element.remove();
     }
 
-    _openImageView = () => {
-        this._openImagePopup(this._data);
-    }
-
     _setEventListeners() {
         // ищем конкретные элементы
         this._likeButton = this._element.querySelector('.element__like-button');
@@ -31,7 +27,7 @@
         // вешаем слушатели
         this._likeButton.addEventListener('click', this._likeCard);
         this._deleteButton.addEventListener('click', this._deleteCard);
-        this._elementPicture.addEventListener('click', this._openImageView);
+        this._elementPicture.addEventListener('click', this._handleCardClick);
     }
         //отрисовка карточек в разметке
     generateCard(){
