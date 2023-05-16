@@ -19,7 +19,12 @@ const createCard = (item) => {
         }
     },
     '#template-item');
-    
+    console.log('1')
+    console.log(item)
+    console.log('2')
+    console.log(card)
+
+
     const cardElement = card.generateCard();
     return cardElement
 };
@@ -53,6 +58,8 @@ const addCardPopup = new PopupWithForm({
     submitFormCallback: (data) => {
         const card = createCard(data);
 
+        console.log('55')
+        console.log(data)
         cardsContainer.addItem(card);
     }
 });

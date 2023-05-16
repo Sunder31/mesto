@@ -33,9 +33,9 @@
                     <button type="button" class="popup__close-button"></button>
                     <form class="form" name="editProfileForm" novalidate>
                         <h2 class="form__title">Редактировать профиль</h2>
-                        <input id="name-input" type="text" class="form__input form__input_el_name " placeholder="Имя" minlength="2" maxlength="40" required>
+                        <input id="name-input" name="username" type="text" class="form__input form__input_el_name " placeholder="Имя" minlength="2" maxlength="40" required>
                         <span class="form__input-error name-input-error"></span>
-                        <input id="about-input" type="text" class="form__input form__input_el_about " placeholder="Вид деятельности" minlength="2" maxlength="200" required>
+                        <input id="about-input" name='userabout' type="text" class="form__input form__input_el_about " placeholder="Вид деятельности" minlength="2" maxlength="200" required>
                         <span class="form__input-error about-input-error "></span>
                         <button type="submit" class="popup__submit-button ">Сохранить</button>
                     </form>
@@ -47,9 +47,9 @@
                     <button type="button" class="popup__close-button"></button>
                     <form class="form" name="addElementForm" novalidate>
                         <h2 class="form__title">Новое место</h2>
-                        <input id="place-input" type="text" class="form__input form__input_place-name " placeholder="Название" minlength="2" maxlength="20" required>
+                        <input id="place-input" name="placeName" type="text" class="form__input form__input_place-name " placeholder="Название" minlength="2" maxlength="20" required>
                         <span class="form__input-error place-input-error"></span>
-                        <input id="image-link-input" type="url" class="form__input form__input_image-link " placeholder="Ссылка на картинку" required>
+                        <input id="image-link-input" name="imageLink" type="url" class="form__input form__input_image-link " placeholder="Ссылка на картинку" required>
                         <span class="form__input-error image-link-input-error "></span>
                         <button type="submit" class="popup__submit-button ">Создать</button>
                     </form>
