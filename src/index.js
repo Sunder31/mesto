@@ -1,3 +1,4 @@
+import './pages/index.css';
 import {Card} from './components/Card.js';
 import {validationConfig} from "./utils/validationConfig.js";
 import {FormValidator} from './components/FormValidator.js'
@@ -8,8 +9,6 @@ import { PopupCardDelete } from './components/PopupCardDelete.js';
 import { UserInfo } from './components/UserInfo.js';
 import {editProfileButton, addCardButton, changeAvatarButton} from './utils/constants.js'
 import { Api } from './components/Api.js';
-
-// Здравствуйте, если вы не против, я соберу работу веб паком после ее выполнения :)
 
 const api = new Api({
     baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-72',
