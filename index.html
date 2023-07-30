@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./pages/index.css">
+        <title>Mesto</title>
+    </head>
+    <body class="wrapper">
+        <div class="page">
+            <header class="header">
+                <div class="logo"></div>
+            </header>
+            <main>
+                <section class="profile">
+                    <button type="button" class="profile__avatar-button"><img src="./images/avatar.svg" alt="фото профиля" class="avatar">
+                    </button>
+                    <div class="profile__info">
+                        <h1 class="profile__name">Жак-Ив Кусто</h1>
+                        <button type="button" class="profile__edit-button"></button>
+                        <p class="profile__about">Исследователь океана</p>
+                    </div>
+                    <button type="button" class="profile__add-button"></button>
+                </section>
+                <section class="elements">
+                </section>
+            </main>
+            <footer class="footer">
+                <p class="footer__copyright">© 2023 Mesto Russia</p>
+            </footer>
+            <!----- Попап для редактирования профиля----->
+            <section class="popup popup_edit-profile">
+                <div class="popup__container">
+                    <button type="button" class="popup__close-button"></button>
+                    <form class="form" name="editProfileForm" novalidate>
+                        <h2 class="form__title">Редактировать профиль</h2>
+                        <input id="name-input" name="username" type="text" class="form__input form__input_el_name" placeholder="Имя" minlength="2" maxlength="40" required>
+                        <span class="form__input-error name-input-error"></span>
+                        <input id="about-input" name='userabout' type="text" class="form__input form__input_el_about" placeholder="Вид деятельности" minlength="2" maxlength="200" required>
+                        <span class="form__input-error about-input-error"></span>
+                        <button type="submit" class="popup__submit-button">Сохранить</button>
+                    </form>
+                </div>
+            </section>
+            <!----- Попап для для добавления карточек----->
+            <section class="popup popup_add-element">
+                <div class="popup__container">
+                    <button type="button" class="popup__close-button"></button>
+                    <form class="form" name="addElementForm" novalidate>
+                        <h2 class="form__title">Новое место</h2>
+                        <input id="place-input" name="imageName" type="text" class="form__input form__input_place-name" placeholder="Название" minlength="2" maxlength="20" required>
+                        <span class="form__input-error place-input-error"></span>
+                        <input id="image-link-input" name="imageLink" type="url" class="form__input form__input_image-link" placeholder="Ссылка на картинку" required>
+                        <span class="form__input-error image-link-input-error "></span>
+                        <button type="submit" class="popup__submit-button">Создать</button>
+                    </form>
+                </div>
+            </section>
+            <!----- Попап просмотра картинки----->
+            <section class="popup popup_image-view">
+                <div class="popup__image-container">
+                    <button type="button" class="popup__close-button"></button>
+                    <img src="#" alt="" class="popup__image">
+                    <p class="popup__image-subtitle"></p>
+                </div>
+            </section>
+            <!----- Попап удаления карточки----->
+            <section class="popup popup_delete-element">
+                <div class="popup__container">
+                    <button type="button" class="popup__close-button"></button>
+                    <h2 class="form__title">Вы уверены?</h2>
+                    <button type="submit" class="popup__submit-button">Да</button>
+                </div>
+            </section>
+            <!----- Попап изменения аватара----->
+            <section class="popup popup_change-avatar">
+                <div class="popup__container">
+                    <button type="button" class="popup__close-button"></button>
+                    <form class="form" name="changeAvatar" novalidate>
+                        <h2 class="form__title">Обновить аватар</h2>
+                        <input id="avatar-input" name="avatar" type="url" class="form__input form__input_image-link" placeholder="Ссылка на картинку" required>
+                        <span class="form__input-error avatar-input-error "></span>
+                        <button type="submit" class="popup__submit-button">Сохранить</button>
+                    </form>
+                </div>
+            </section>
+            <template id="template-item">
+                <div class="element">
+                    <button type="button" class="element__delete-button"></button>
+                    <img src="#" alt="" class="element__picture">
+                    <div class="element__info">
+                        <h2 class="element__name"></h2>
+                        <div class="element__likes">
+                            <button type="button" class="element__like-button"></button>
+                            <span class="element__like-counter"></span>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <script type='module' src="./index.js"></script>
+    </body>
+</html>
