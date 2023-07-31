@@ -10,8 +10,6 @@ class PopupCardDelete extends Popup{
     setEventListeners(){
         this._confirmButton.addEventListener('click', () => {
             this._removeCard(this._item, this._itemId)
-
-            super.close()
         })
         super.setEventListeners()
     }

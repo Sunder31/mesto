@@ -36,6 +36,7 @@ api.renderInitialData()
                 api.deleteCard(cardId)
                     .then(() => {
                         card.deleteCard()
+                        popupCardDelete.close()
                     })
                     .catch((err) => {
                         console.error(err)

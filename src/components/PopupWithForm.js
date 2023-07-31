@@ -36,7 +36,6 @@ class PopupWithForm extends Popup{
             this.renderLoading(true);
 
             this._submitFormCallback(this._getInputValues());
-            this.close();
         })
     }
 
